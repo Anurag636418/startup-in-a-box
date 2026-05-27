@@ -2,9 +2,11 @@ import json
 import os
 import sys
 
+from dotenv import load_dotenv
 import streamlit as st
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
 
 from orchestrator.workflow import save_results
 
@@ -146,6 +148,13 @@ investment decisions or fundraising without expert validation.
 
 st.markdown("---")
 
+groq_api_key = os.getenv("GROQ_API_KEY")
+if not groq_api_key or groq_api_key == "your_groq_api_key_here":
+    st.error(
+        "GROQ_API_KEY is not configured. Add it to your deployment platform's "
+        "environment variables or secrets before generating a pitch."
+    )
+
 col1, col2 = st.columns([4, 1])
 with col1:
     idea = st.text_area(
@@ -160,7 +169,9 @@ with col2:
 
 
 if run_btn:
-    if not idea.strip():
+    if not groq_api_key or groq_api_key == "your_groq_api_key_here":
+        st.error("Missing GROQ_API_KEY. Configure it in your deployment settings and redeploy.")
+    elif not idea.strip():
         st.error("Please enter a startup idea first.")
     else:
         with st.status("Running AI agents...", expanded=True) as status:
