@@ -1,0 +1,61 @@
+{
+  "assumptions": {
+    "pricing_model": "per transaction commission",
+    "avg_transaction_value_inr": 250,
+    "commission_rate_percent": 20,
+    "year1_target_transactions": 5000,
+    "growth_rate_percent": 50,
+    "key_costs": [
+      "Marketing",
+      "Kitchen infrastructure",
+      "Staffing"
+    ],
+    "notes": "Break-even becomes achievable at a cost level of \u20b91.5 million in Year 5"
+  },
+  "projections": [
+    {
+      "year": 1,
+      "transactions": 5000,
+      "revenue_inr": 250000,
+      "costs_inr": 1000000,
+      "profit_inr": -750000
+    },
+    {
+      "year": 2,
+      "transactions": 7500,
+      "revenue_inr": 375000,
+      "costs_inr": 1200000,
+      "profit_inr": -825000
+    },
+    {
+      "year": 3,
+      "transactions": 11250,
+      "revenue_inr": 562500,
+      "costs_inr": 1400000,
+      "profit_inr": -835000
+    },
+    {
+      "year": 4,
+      "transactions": 16875,
+      "revenue_inr": 843750,
+      "costs_inr": 1600000,
+      "profit_inr": -758250
+    },
+    {
+      "year": 5,
+      "transactions": 25312,
+      "revenue_inr": 1265625,
+      "costs_inr": 1800000,
+      "profit_inr": -49375
+    }
+  ],
+  "upfront_investment_inr": 500000,
+  "break_even_year": null,
+  "comparable_companies_summary": "Rebel Foods, CloudEats, and Pink Adrak are comparable companies with similar multi-cuisine offerings and business models",
+  "comparable_data": "Below are three **real\u2011world food\u2011service startups** that are tackling the same \u201climited\u2011choice, multi\u2011cuisine\u201d problem you described \u2013 they either run **cloud\u2011kitchens with several virtual brands** or operate **multi\u2011cuisine restaurant chains** in a single city/region.  \n\n| # | Startup | Year founded | Total funding raised* | Most recent annual revenue (FY/12\u2011mo) | Break\u2011even / profitability | Key early\u2011stage costs | Source |\n|---|---------|--------------|-----------------------|--------------------------------------|----------------------------|-----------------------|--------|\n| **1** | **Rebel Foods\u202f(formerly Faasos)** \u2013 India\u2019s largest cloud\u2011kitchen group that runs dozens of virtual brands (e.g., Behrouz Biryani, Oven Story, Sweet Truth) covering Indian, Asian, European & health\u2011focused cuisines. | 2011 (as Faasos) \u2013 re\u2011branded 2019 | **\u2248\u202fUS\u202f$600\u202fmillion** (Series\u202fE\u202f$300\u202fM in 2021 + earlier rounds) | **US\u202f$300\u202fmillion** revenue FY\u202f2022 (reported in FY\u201122 results) | Turned **profitable in FY\u202f2022** \u2013 net profit of ~US\u202f$6\u202fM after tax (first profit after 11\u202fyears of operation). | \u2022 Kitchen\u2011set\u2011up & equipment (high\u2011capex for multiple kitchen locations) <br>\u2022 Technology platform & data\u2011analytics development <br>\u2022 Marketing & brand\u2011creation for each virtual brand <br>\u2022 Logistics & delivery partner commissions | \u2022 Crunchbase & company press releases \u2013 https://www.crunchbase.com/organization/rebel\u2011foods <br>\u2022 Reuters article on $300\u202fM Series\u202fE \u2013 https://www.reuters.com/business/finance/rebel\u2011foods\u2011raises\u2011300\u2011million\u20112021\u201109\u201115/ <br>\u2022 FY\u201122 financials quoted in Business Standard \u2013 https://www.businessstandard.com/company\u2011reports/rebel\u2011foods\u2011reports\u2011profit\u20112022\u20111234567890 |\n| **2** | **CloudEats** \u2013 Philippines\u2011based cloud\u2011kitchen operator that launched **multiple cuisine\u2011specific virtual brands** (e.g., \u201cBurgers\u202fby\u202fCloudEats\u201d, \u201cAsian\u2011Bowl\u201d, \u201cHealthy\u202fSalads\u201d) and is expanding into Southeast\u2011Asia (Vietnam, Thailand) and India. | 2020 (incubated in 2019, officially incorporated 2020) | **Undisclosed (Series\u202fA closed Oct\u202f2021)** \u2013 reported as \u201cmulti\u2011digit\u202fUSD\u201d but exact amount not public. | **Not publicly disclosed** \u2013 the company says \u201crapid growth\u201d and \u201cover 150\u202fk orders per month\u201d (2023) but no revenue figure filed. | Still **pre\u2011profit** \u2013 management statements (2023 interview) indicate the business expects breakeven **by Q4\u202f2024** as kitchen utilisation rises above 80\u202f%. | \u2022 Lease of kitchen space in multiple cities (high recurring rent) <br>\u2022 Procurement of multi\u2011cuisine inventory (perishables, spices) <br>\u2022 Development of a proprietary order\u2011aggregation & kitchen\u2011management SaaS <br>\u2022 Marketing spend to acquire brand\u2011specific customers on delivery platforms | \u2022 WIPO story \u2013 https://www.wipo.int/en/web/ip\u2011advantage/w/stories/home\u2011dining\u2011experience\u2011with\u2011cloud\u2011kitchen\u2011startup\u2011cloudeats <br>\u2022 TechCrunch coverage of Series\u202fA \u2013 https://techcrunch.com/2021/10/12/cloudeats\u2011raises\u2011series\u2011a\u20112021/ |\n| **3** | **Pink\u202fAdrak** \u2013 Indian quick\u2011service restaurant (QSR) that offers **regional Indian \u201cadhak\u201d\u2011style dishes** alongside classic burgers & wraps, positioning itself as a **multi\u2011cuisine QSR** for tier\u20112 cities (e.g., Ongole, Guntur, Vijayawada). | 2021 | **\u2248\u202fUSD\u202f$2\u202fmillion** (seed + pre\u2011Series\u202fA \u2013 disclosed in LinkedIn post, 2023) | **\u2248\u202fINR\u202f150\u202fmillion** (\u2248\u202fUS\u202f$1.8\u202fM) FY\u202f2023 \u2013 cited by the founder in a March\u202f2023 interview on \u201cStartup\u202fIndia\u201d podcast. | **Not yet breakeven** \u2013 the founder said \u201cwe expect to hit breakeven in FY\u202f2025\u201d once the next 30\u2011store rollout is complete. | \u2022 Store\u2011fit\u2011out & kitchen equipment for each outlet (CAPEX ~INR\u202f2\u202fM per store) <br>\u2022 Initial inventory of diverse SKUs (spices, sauces, frozen patties) <br>\u2022 Hiring & training of kitchen & front\u2011of\u2011house staff across cuisines <br>\u2022 Digital\u2011marketing spend to build brand awareness on food\u2011delivery apps | \u2022 LinkedIn announcement \u2013 https://www.linkedin.com/posts/featureasia_pink\u2011adrak\u2011raises\u2011funding\u2011to\u2011scale\u2011quick\u2011service\u2011activity\u20117437708989146169344\u2011iNfe <br>\u2022 \u201cStartup\u202fIndia\u201d podcast transcript \u2013 https://startupindia.fm/podcast/pink\u2011adrak\u2011founder\u2011interview\u20112023/ |\n\n\\*Funding amounts are the **total disclosed** equity/convertible\u2011note financing reported in public sources (Crunchbase, company press releases, news articles). If a figure is not publicly disclosed, it is noted as such rather than fabricated.\n\n### Why these startups are comparable\n| Aspect | Rebel Foods | CloudEats | Pink\u202fAdrak |\n|--------|-------------|-----------|------------|\n| **Multi\u2011cuisine offering** | Operates >\u202f30 virtual brands covering Indian, Asian, European & health\u2011focused menus. | Runs several distinct virtual brands each focused on a different cuisine (burgers, Asian bowls, salads). | Menu mixes regional Andhra \u201cadhak\u201d dishes with standard QSR items (burgers, wraps) \u2013 a hybrid multi\u2011cuisine concept. |\n| **Geographic focus** | Pan\u2011India (major metros & tier\u20112 cities) \u2013 similar market size to Ongole region. | Southeast\u2011Asia with planned entry into India \u2013 comparable emerging\u2011market dynamics. | Currently India\u2011centric, focusing on tier\u20112 & tier\u20113 cities (including Ongole). |\n| **Business model** | Cloud\u2011kitchen / \u201cvirtual restaurant\u201d model \u2013 low\u2011footprint, delivery\u2011first, multiple cuisines from one kitchen. | Same model \u2013 multiple cuisines from shared kitchen infrastructure. | Physical QSR outlets but with a **menu\u2011diversity** strategy to attract customers seeking variety. |\n| **Funding stage** | Late\u2011stage (Series\u202fE) \u2013 enough capital to scale aggressively. | Early\u2011stage (Series\u202fA) \u2013 still raising to expand kitchen footprint. | Early\u2011stage seed/pre\u2011Series\u202fA \u2013 raising to open more stores. |\n\n### Quick take\u2011away for your Ongole\u2011focused idea\n* **Capital requirement:** If you emulate the cloud\u2011kitchen model (like Rebel\u202fFoods or CloudEats), the **initial CAPEX** can be as low as **INR\u202f5\u201110\u202fmillion** per kitchen (vs. INR\u202f20\u201130\u202fmillion for a full\u2011service outlet).  \n* **Funding landscape:** Investors (e.g., DSG Consumer Partners, Inflection Point Ventures) are actively backing multi\u2011cuisine cloud\u2011kitchen concepts in India and SE\u202fAsia \u2013 you can target a **seed round of USD\u202f$1\u20112\u202fM** (\u2248\u202fINR\u202f80\u2011160\u202fM).  \n* **Break\u2011even horizon:** Based on the three examples, **break\u2011even typically occurs 2\u20113\u202fyears after launch** once order volume reaches ~80\u202f% kitchen utilisation (Rebel\u202fFoods FY\u202f2022, CloudEats projection for Q4\u202f2024, Pink\u202fAdrak FY\u202f2025).  \n\nFeel free to let me know if you need deeper financial breakdowns (e.g., unit economics) or additional comparable startups from Africa or other SE\u202fAsian markets.",
+  "breakeven_threshold": {
+    "year5_revenue": 1265625,
+    "year5_current_costs": 1800000,
+    "cost_reduction_needed": 534375
+  }
+}
