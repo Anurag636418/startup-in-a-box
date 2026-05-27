@@ -3,9 +3,12 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from groq import Groq
+from tools.common_utils import truncate_text
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(PROJECT_ROOT / ".env")
+
+MAX_COMPOUND_INPUT_CHARS = 6_000
 
 
 def get_comparable_companies(startup_idea: str, sector: str) -> str:
@@ -20,6 +23,8 @@ def get_comparable_companies(startup_idea: str, sector: str) -> str:
         raise ValueError("GROQ_API_KEY not found. Copy .env.example to .env and add your key.")
 
     client = Groq(api_key=api_key)
+    startup_idea = truncate_text(startup_idea, MAX_COMPOUND_INPUT_CHARS, "startup idea")
+    sector = truncate_text(sector, 500, "sector")
 
     response = client.chat.completions.create(
         model="groq/compound-mini",
@@ -64,6 +69,8 @@ def get_financial_benchmarks(startup_context: str, sector_hint: str) -> str:
         raise ValueError("GROQ_API_KEY not found. Copy .env.example to .env and add your key.")
 
     client = Groq(api_key=api_key)
+    startup_context = truncate_text(startup_context, MAX_COMPOUND_INPUT_CHARS, "startup context")
+    sector_hint = truncate_text(sector_hint, 500, "sector hint")
 
     response = client.chat.completions.create(
         model="groq/compound-mini",

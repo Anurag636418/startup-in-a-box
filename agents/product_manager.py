@@ -1,8 +1,9 @@
-from tools.common_utils import call_llm
+from tools.common_utils import call_llm, truncate_text
 
 
 def run_product_manager(market_report: str) -> str:
     print("Product Manager is defining the product...")
+    market_report = truncate_text(market_report, 8_000, "market report")
 
     system = """You are a sharp product manager.
 You read market research and convert it into a focused, buildable product spec.

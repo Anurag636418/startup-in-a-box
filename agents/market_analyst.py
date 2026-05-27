@@ -1,8 +1,9 @@
-from tools.common_utils import call_llm
+from tools.common_utils import call_llm, truncate_text
 
 
 def run_market_analyst(startup_idea: str) -> str:
     print("Market Analyst is researching...")
+    startup_idea = truncate_text(startup_idea.strip(), 4_000, "startup idea")
 
     system = """You are a skeptical market research analyst.
 Your job is to validate startup ideas with real reasoning, not hype.

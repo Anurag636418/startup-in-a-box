@@ -1,10 +1,12 @@
 import json
 
-from tools.common_utils import call_llm
+from tools.common_utils import call_llm, truncate_text
 
 
 def run_pitch_creator(market_report: str, product_spec: str, financials: dict) -> str:
     print("Pitch Creator is building the deck...")
+    market_report = truncate_text(market_report, 6_000, "market report")
+    product_spec = truncate_text(product_spec, 4_000, "product spec")
 
     finance_summary = json.dumps(
         {
@@ -16,8 +18,13 @@ def run_pitch_creator(market_report: str, product_spec: str, financials: dict) -
         },
         indent=2,
     )
+    finance_summary = truncate_text(finance_summary, 4_000, "financial summary")
 
-    comparable_data = financials.get("comparable_data", "No comparable data available.")
+    comparable_data = truncate_text(
+        financials.get("comparable_data", "No comparable data available."),
+        5_000,
+        "comparable company data",
+    )
 
     system = """You are an expert startup pitch writer.
 You create concise, investor-ready pitch deck outlines in Marp Markdown format.

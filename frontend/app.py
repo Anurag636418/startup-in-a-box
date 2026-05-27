@@ -152,6 +152,7 @@ with col1:
         "Your startup idea",
         placeholder="Example: an app for renting farm equipment to small farmers in rural India",
         height=110,
+        max_chars=4000,
     )
 with col2:
     st.markdown("<br><br>", unsafe_allow_html=True)

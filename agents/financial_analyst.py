@@ -1,6 +1,6 @@
 import json
 
-from tools.common_utils import call_llm
+from tools.common_utils import call_llm, truncate_text
 from tools.finance_tools import (
     calculate_break_even_gap,
     calculate_revenue,
@@ -21,6 +21,8 @@ def _strip_json_fence(raw: str) -> str:
 
 def run_financial_analyst(market_report: str, product_spec: str) -> dict:
     print("Financial Analyst is building projections...")
+    market_report = truncate_text(market_report, 8_000, "market report")
+    product_spec = truncate_text(product_spec, 5_000, "product spec")
 
     sector = call_llm(
         f"Extract the industry/sector in 3 words max from this market report: {market_report[:500]}",
@@ -29,6 +31,7 @@ def run_financial_analyst(market_report: str, product_spec: str) -> dict:
 
     startup_context = f"{market_report[:1200]}\n\nPRODUCT SPEC:\n{product_spec[:800]}"
     benchmark_data = get_financial_benchmarks(startup_context, sector)
+    benchmark_data = truncate_text(benchmark_data, 8_000, "financial benchmarks")
     print(f"\nFinancial benchmarks found for sector hint: {sector}")
     print(benchmark_data[:500] + "...\n")
 
