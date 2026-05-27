@@ -67,7 +67,7 @@ python -m venv .venv
 Install dependencies:
 
 ```bash
-pip install -e ".[dev]"
+pip install -r requirements-dev.txt
 ```
 
 Create your environment file:
@@ -109,4 +109,3 @@ Generated run outputs are ignored by Git. Curated examples are kept in `data/exa
 ## Financial Disclaimer
 
 The financial projections are AI-generated estimates for ideation and portfolio demonstration only. They may use public benchmark data where available, but missing values are treated as unavailable or estimated. They are not financial advice and should not be used for investment or fundraising decisions without expert validation.
-
