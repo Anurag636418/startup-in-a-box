@@ -1,0 +1,4 @@
+groq
+streamlit
+python-dotenv
+pydantic>=2
