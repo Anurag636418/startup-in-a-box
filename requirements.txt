@@ -2,3 +2,6 @@ groq
 streamlit
 python-dotenv
 pydantic>=2
+
+# Development dependencies
+pytest
